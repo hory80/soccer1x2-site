@@ -7,81 +7,99 @@
   <meta name="description" content="Privacy Policy for Soccer 1 X 2 score prediction." />
   <style>
     :root {
-      --bg: #eaf7f8;
-      --card: rgba(255,255,255,0.72);
+      --bg-top: #dff3f4;
+      --bg-mid: #eaf7f8;
+      --bg-bottom: #f6f3ec;
+      --card: rgba(255,255,255,0.76);
       --text: #132126;
       --muted: #5f6f75;
       --accent: #1f7aff;
       --accent-2: #19a974;
       --border: rgba(19,33,38,0.08);
       --shadow: 0 10px 30px rgba(19,33,38,0.10);
-      --radius: 24px;
+      --radius: 28px;
       --max: 980px;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(31,122,255,0.12), transparent 30%),
-        radial-gradient(circle at top right, rgba(25,169,116,0.10), transparent 25%),
-        linear-gradient(180deg, #dff3f4 0%, var(--bg) 42%, #f6f3ec 100%);
       line-height: 1.55;
+      background:
+        radial-gradient(circle at top left, rgba(31,122,255,0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(25,169,116,0.08), transparent 25%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 42%, var(--bg-bottom) 100%);
+      min-height: 100vh;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .wrap {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
-    header { padding: 40px 0 18px; }
-    .hero, .card {
+
+    header {
+      padding: 56px 0 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 24px;
+      align-items: center;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
-      padding: 24px;
+      padding: 28px;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
     }
-    .hero {
-      display: grid;
-      grid-template-columns: 104px 1fr;
-      gap: 20px;
-      align-items: center;
-    }
+
     .app-icon {
-      width: 104px;
-      height: 104px;
-      border-radius: 24px;
+      width: 112px;
+      height: 112px;
+      border-radius: 26px;
       overflow: hidden;
       box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-      border: 1px solid rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.75);
       background: #0d3a84;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 800;
-      text-align: center;
-      padding: 12px;
-      font-size: 16px;
+      flex-shrink: 0;
     }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     h1 {
       margin: 0 0 10px;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
-    h2 {
-      margin: 0 0 12px;
-      font-size: 28px;
-      letter-spacing: -0.02em;
+
+    .tagline {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
     }
-    h3 { margin: 22px 0 10px; font-size: 18px; }
-    .tagline, .muted { color: var(--muted); }
-    .tagline { margin: 0; font-size: 18px; max-width: 700px; }
+
     nav {
       position: sticky;
       top: 0;
@@ -91,6 +109,7 @@
       background: rgba(234,247,248,0.72);
       border-bottom: 1px solid rgba(19,33,38,0.06);
     }
+
     .nav-inner {
       display: flex;
       gap: 18px;
@@ -98,54 +117,107 @@
       padding: 14px 0;
       white-space: nowrap;
     }
-    .nav-inner a { color: var(--muted); font-weight: 600; }
-    .nav-inner a:hover, .nav-inner a:focus { color: var(--text); text-decoration: none; }
-    main { padding: 28px 0 72px; }
-    .grid { display: grid; gap: 18px; }
-    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    p { margin: 0 0 12px; }
-    ul { margin: 0; padding-left: 20px; }
-    li + li { margin-top: 8px; }
-    .notice {
-      border-left: 4px solid var(--accent-2);
-      padding-left: 14px;
+
+    .nav-inner a {
       color: var(--muted);
+      font-weight: 600;
     }
-    footer { padding: 0 0 48px; color: var(--muted); font-size: 14px; }
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      border-radius: 999px;
-      padding: 12px 18px;
-      font-weight: 700;
+
+    .nav-inner a:hover,
+    .nav-inner a:focus {
+      color: var(--text);
       text-decoration: none;
     }
-    .btn:hover { text-decoration: none; opacity: 0.92; }
-    .pill {
-      display: inline-block;
+
+    main {
+      padding: 28px 0 72px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.68);
-      border-radius: 999px;
-      padding: 8px 12px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .inline {
+      background: rgba(255,255,255,0.64);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-size: 0.95em;
+    }
+
+    footer {
+      padding: 0 0 48px;
+      color: var(--muted);
       font-size: 14px;
-      margin-right: 8px;
-      margin-bottom: 8px;
     }
+
     @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; }
-      .two-col { grid-template-columns: 1fr; }
-      header { padding-top: 28px; }
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 28px;
+      }
+
+      .app-icon {
+        width: 96px;
+        height: 96px;
+      }
     }
-</style>
+  </style>
 </head>
 <body>
   <header class="wrap">
     <section class="hero">
-      <div class="app-icon" aria-hidden="true">SOCCER<br>1 X 2</div>
+      <div class="app-icon">
+        <img src="AppIcon-1024.png" alt="Soccer 1 X 2 score prediction app icon" />
+      </div>
+
       <div>
         <h1>Privacy Policy</h1>
-        <p class="tagline">How Soccer 1 X 2 score prediction handles account, gameplay, and purchase-related data.</p>
+        <p class="tagline">
+          How Soccer 1 X 2 score prediction handles account, gameplay, and purchase-related data.
+        </p>
       </div>
     </section>
   </header>
@@ -161,10 +233,15 @@
   <main class="wrap grid">
     <section class="card">
       <h2>Effective date</h2>
-      <p class="muted">Replace this line with the final date before publishing.</p>
+      <p class="muted">
+        Replace this with the final publication date before submitting to the App Store.
+      </p>
 
       <h3>What information may be processed</h3>
-      <p>The app may process account information, profile display information, predictions, pool membership, leaderboard data, and purchase status needed to provide app functionality.</p>
+      <p>
+        The app may process account information, profile display information, predictions,
+        pool membership, leaderboard data, and purchase status needed to provide app functionality.
+      </p>
 
       <h3>How information is used</h3>
       <ul>
@@ -175,16 +252,33 @@
       </ul>
 
       <h3>Third-party services</h3>
-      <p>The app may use Apple services, Google sign-in services, Firebase services, and Apple in-app purchase infrastructure to operate core functionality.</p>
+      <p>
+        The app may use Apple services, Google sign-in services, Firebase services,
+        and Apple in-app purchase infrastructure to operate core functionality.
+      </p>
 
       <h3>Children</h3>
-      <p>The app is intended as an entertainment product and is not designed to promote gambling activity. Parents or guardians should decide whether the app is appropriate for younger users.</p>
+      <p>
+        The app is intended as an entertainment product and is not designed to promote gambling activity.
+        Parents or guardians should decide whether the app is appropriate for younger users.
+      </p>
 
       <h3>Data requests</h3>
-      <p>For privacy-related requests, corrections, or support, contact <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a>.</p>
+      <p>
+        For privacy-related requests, corrections, or support, contact
+        <a href="mailto:YOUR-EMAIL@example.com">iptvnou@gmail.com</a>.
+      </p>
 
       <h3>Policy updates</h3>
-      <p>This policy may be updated from time to time to reflect app changes, legal requirements, or service updates. The latest version will be published on this page.</p>
+      <p>
+        This policy may be updated from time to time to reflect app changes, legal requirements,
+        or service updates. The latest version will be published on this page.
+      </p>
+
+      <p class="muted">
+        Suggested note:
+        <span class="inline">Replace placeholder email and date before publishing.</span>
+      </p>
     </section>
   </main>
 
