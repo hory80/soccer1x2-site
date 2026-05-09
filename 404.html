@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found | Soccer 1 X 2 score prediction</title>
+  <meta name="description" content="Page not found." />
+  <style>
+    :root {
+      --bg: #eaf7f8;
+      --card: rgba(255,255,255,0.72);
+      --text: #132126;
+      --muted: #5f6f75;
+      --accent: #1f7aff;
+      --accent-2: #19a974;
+      --border: rgba(19,33,38,0.08);
+      --shadow: 0 10px 30px rgba(19,33,38,0.10);
+      --radius: 24px;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(31,122,255,0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(25,169,116,0.10), transparent 25%),
+        linear-gradient(180deg, #dff3f4 0%, var(--bg) 42%, #f6f3ec 100%);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+    header { padding: 40px 0 18px; }
+    .hero, .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .app-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      border: 1px solid rgba(255,255,255,0.65);
+      background: #0d3a84;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+    h3 { margin: 22px 0 10px; font-size: 18px; }
+    .tagline, .muted { color: var(--muted); }
+    .tagline { margin: 0; font-size: 18px; max-width: 700px; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(234,247,248,0.72);
+      border-bottom: 1px solid rgba(19,33,38,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding: 14px 0;
+      white-space: nowrap;
+    }
+    .nav-inner a { color: var(--muted); font-weight: 600; }
+    .nav-inner a:hover, .nav-inner a:focus { color: var(--text); text-decoration: none; }
+    main { padding: 28px 0 72px; }
+    .grid { display: grid; gap: 18px; }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 8px; }
+    .notice {
+      border-left: 4px solid var(--accent-2);
+      padding-left: 14px;
+      color: var(--muted);
+    }
+    footer { padding: 0 0 48px; color: var(--muted); font-size: 14px; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .btn:hover { text-decoration: none; opacity: 0.92; }
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.68);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      header { padding-top: 28px; }
+    }
+</style>
+</head>
+<body>
+  <header class="wrap">
+    <section class="hero">
+      <div class="app-icon" aria-hidden="true">SOCCER<br>1 X 2</div>
+      <div>
+        <h1>Page not found</h1>
+        <p class="tagline">The page you are looking for does not exist or has moved.</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>Try one of these pages</h2>
+      <p><a class="btn" href="index.html">Go to Home</a></p>
+      <p><a class="btn" href="privacy.html">Open Privacy Policy</a></p>
+      <p><a class="btn" href="support.html">Open Support</a></p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>&copy; 2026 Soccer 1 X 2 score prediction. All rights reserved.</p>
+  </footer>
+</body>
+</html>
